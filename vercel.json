@@ -1,38 +1,6 @@
 {
-  "version": 2,
-  "name": "topup-premium-app",
-  "builds": [
-    {
-      "src": "next.config.mjs",
-      "use": "@vercel/next"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/api/midtrans-webhook",
-      "dest": "/api/midtrans-webhook",
-      "methods": ["POST", "GET"],
-      "headers": {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "POST, GET, OPTIONS",
-        "Access-Control-Allow-Headers": "Content-Type, Authorization"
-      }
-    },
-    {
-      "src": "/api/(.*)",
-      "dest": "/api/$1",
-      "headers": {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
-        "Access-Control-Allow-Headers": "Content-Type, Authorization"
-      }
-    }
-  ],
   "functions": {
-    "app/api/midtrans/route.js": {
-      "maxDuration": 30
-    },
-    "app/api/midtrans-webhook/route.js": {
+    "app/api/*/route.js": {
       "maxDuration": 30
     }
   },
@@ -55,20 +23,5 @@
       ]
     }
   ],
-  "redirects": [
-    {
-      "source": "/",
-      "destination": "/dashboard",
-      "permanent": false
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/admin/:path*",
-      "destination": "/admin/:path*"
-    }
-  ],
-  "env": {
-    "NODE_ENV": "production"
-  }
+  "rewrites": [{ "source": "/api/midtrans-webhook", "destination": "/api/midtrans-webhook" }]
 }
