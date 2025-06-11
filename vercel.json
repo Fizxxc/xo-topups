@@ -24,8 +24,3 @@
     }
   ],
   "rewrites": [{ "source": "/api/midtrans-webhook", "destination": "/api/midtrans-webhook" }]
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> 58f11dc524c6464e4a3a8d23e1499e80147bb608
