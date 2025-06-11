@@ -51,7 +51,7 @@ export default function PaymentError() {
 
   const contactSupport = () => {
     // Bisa diarahkan ke halaman contact atau WhatsApp
-    window.open("https://wa.me/6281234567890?text=Halo, saya mengalami masalah dengan pembayaran", "_blank")
+    window.open("https://wa.me/6288991114939?text=Halo, saya mengalami masalah dengan pembayaran", "_blank")
   }
 
   if (loading) {
