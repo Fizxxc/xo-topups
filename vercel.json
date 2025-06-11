@@ -24,3 +24,4 @@
     }
   ],
   "rewrites": [{ "source": "/api/midtrans-webhook", "destination": "/api/midtrans-webhook" }]
+}
