@@ -28,14 +28,6 @@
       }
     }
   ],
-  "functions": {
-    "app/api/midtrans/route.js": {
-      "maxDuration": 30
-    },
-    "app/api/midtrans-webhook/route.js": {
-      "maxDuration": 30
-    }
-  },
   "headers": [
     {
       "source": "/api/(.*)",
